@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Random String Generator</string>
+    <string name="length_label">Length</string>
+    <string name="generate_button">Generate</string>
+    <string name="delete_all_button">Delete All</string>
+    <string name="error_prefix">Error: </string>
+    <string name="value_label">Value: %1$s</string>
+    <string name="length_value_label">Length: %1$d</string>
+    <string name="created_label">Created: %1$s</string>
+    <string name="delete_button">Delete</string>
+</resources>

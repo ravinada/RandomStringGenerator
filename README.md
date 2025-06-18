@@ -34,27 +34,35 @@ A simple Android app that queries a slow and unreliable content provider to fetc
 
 ## 🏗 Architecture
 
-The app follows a modular MVVM pattern:
+The app is structured using **MVVM** combined with **Clean Architecture** principles:
 
 ```
-UI (Jetpack Compose)
-│
-├── MainScreen (Composable)
-│
+Presentation Layer (UI)
+├── MainScreen (Jetpack Compose Composable)
 ├── ViewModel (RandomStringViewModel)
-│   └── StateFlow to expose UI state
+│   └── Exposes UI state using StateFlow
 │
+Domain Layer
 ├── UseCase (FetchRandomStringUseCase)
-│   └── Handles logic to communicate with ContentProvider
+│   └── Handles business logic and abstracts data operations
 │
+Data Layer
 └── Repository (RandomStringRepository)
     └── Queries ContentProvider and parses JSON response
 ```
 
-- **Jetpack Compose** for UI
-- **Hilt** for Dependency Injection
-- **Kotlin Coroutines + Flow** for async state management
-- **Material3** (no custom theme modifications)
+## 🔧 Tech Stack
+
+- **Kotlin**
+- **Jetpack Compose** – Declarative UI framework
+- **MVVM Architecture** – Separation of concerns
+- **Clean Architecture Principles** – Use cases, repositories, models
+- **StateFlow / MutableStateFlow** – Reactive state handling
+- **Hilt (Dagger)** – Dependency injection
+- **Coroutines** – Asynchronous programming
+- **Material3** – UI components
+- **JUnit5 + Mockito + Turbine** – Unit testing support
+
 
 ---
 

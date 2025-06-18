@@ -17,7 +17,7 @@ class RandomStringViewModel @Inject constructor(
     private val fetchRandomStringUseCase: FetchRandomStringUseCase
 ) : ViewModel() {
 
-    private val _randomStrings = MutableStateFlow<List<RandomString>>(emptyList())
+    internal val _randomStrings = MutableStateFlow<List<RandomString>>(emptyList())
     val randomStrings: StateFlow<List<RandomString>> = _randomStrings
 
     private val _error = MutableStateFlow<String?>(null)

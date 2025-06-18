@@ -69,4 +69,8 @@ dependencies {
 
     // Hilt and DataStore need kapt
     kapt(libs.androidx.hilt.compiler)
+
+    // Unit Testing
+    testImplementation(libs.mockk) //
+    testImplementation(libs.coroutines.test) //
 }

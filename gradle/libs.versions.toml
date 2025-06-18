@@ -10,8 +10,11 @@ activityCompose = "1.10.1"
 composeBom = "2024.04.01"
 hilt = "2.51.1"
 kotlinxCoroutinesAndroid = "1.9.0"
-hiltAndroid = "2.51.1"
 hiltNavigationCompose = "1.2.0"
+mockito-kotlin = "5.2.1"
+turbine = "1.1.0"
+mockk = "1.13.10"
+coroutinesTest = "1.7.3"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -33,6 +36,11 @@ hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hil
 androidx-hilt-compiler = { module = "androidx.hilt:hilt-compiler", version.ref = "hiltNavigationCompose" }
 androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
 kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesAndroid" }
+mockito-kotlin = { module = "org.mockito.kotlin:mockito-kotlin", version.ref = "mockito-kotlin" }
+turbine = { module = "app.cash.turbine:turbine", version.ref = "turbine" }
+mockk = { group = "io.mockk", name = "mockk", version.ref = "mockk" }
+androidx-core-testing = { group = "androidx.arch.core", name = "core-testing", version = "2.2.0" }
+coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutinesTest" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

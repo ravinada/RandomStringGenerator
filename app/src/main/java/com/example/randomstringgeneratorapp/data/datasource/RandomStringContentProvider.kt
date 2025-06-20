@@ -10,8 +10,11 @@ import kotlinx.coroutines.withContext
 import org.json.JSONObject
 import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter
+import javax.inject.Inject
 
-class RandomStringContentProvider(private val context: Context) : RandomStringDataSource {
+class RandomStringContentProvider @Inject constructor(
+    private val context: Context
+) : RandomStringDataSource {
     override suspend fun getRandomString(length: Int): Result<RandomString> = withContext(
         Dispatchers.IO
     ) {
